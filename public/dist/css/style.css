@@ -1,0 +1,14 @@
+.btn-shipment {
+	padding: 6px 40px 6px 40px;
+}
+.shipment-content {
+	background: #fff;
+	padding-top: 20px;
+	margin-top: 20px;
+}
+.shipment-content table thead {
+	background: #e9e7e7;
+}
+.shipment-content table td.action {
+	padding-left: 20px;
+}

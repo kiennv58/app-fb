@@ -36,7 +36,8 @@
         ],
         "post-create-project-cmd": [
             "php artisan key:generate",
-            "composer install"
+            "composer install",
+            "php artisan migrate"
         ]
     },
     "config": {

@@ -14,7 +14,7 @@ class AddColumnUser extends Migration
     public function up()
     {
         Schema::table('users', function(Blueprint $table) {
-            $table->integer('provider_id')->nullable();
+            $table->string('provider_id')->nullable();
         });
     }
 

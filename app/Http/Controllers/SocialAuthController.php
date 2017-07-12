@@ -98,9 +98,9 @@ class SocialAuthController extends Controller
         }
 
         return User::create([
-            'name'          => $providerUser->name,
-            'email'         => $providerUser->email,
-            'provider_id'   => $providerUser->getId(),
+            'name'          => $providerUser->all()['name'],
+            'email'         => $providerUser->all()['email'],
+            'provider_id'   => $providerUser->all()['id'],
             'password' => '123456'
         ]);
     }

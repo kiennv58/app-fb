@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>CSKH</title>
+  <title>Customer Support Center - NVK</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -87,11 +87,8 @@
     <section class="sidebar">
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-        <li><a href="#"><span>Điều phối đơn</span></a></li>
-        <li><a href="#"><span>Quản lý shipper</span></a></li>
-        <li><a href="#"><span>Quản lý vận đơn</span></a></li>
-        <li><a href="#"><span>Quản lý shop</span></a></li>
-        <li><a href="#"><span>Cấu hình hệ thống</span></a></li>
+        <li class="active"><a href="#"><span>Support Group</span></a></li>
+        <li><a href="#"><span>Settings</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -114,8 +111,8 @@
           <thead>
             <tr>
               <th width="10px">#</th>
-              <th>Nội dung</th>
-              <th width="180px">Thao tác</th>
+              <th>Message</th>
+              <th width="180px">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -124,9 +121,10 @@
               <td>{{ $key + 1 }}</td>
               <td>{{ array_key_exists('message', $post->all()) ? $post->all()['message'] : $post->all()['story'] }}</td>
               <td class="action">
-                <p><a href="#">Xóa tin trên group</a></p>
-                <p><a href="#">Ẩn tin trong group</a></p>
-                <p><a href="#">Trả lời tin trên group</a></p>
+                <p><a href="#">Delete</a></p>
+                <p><a href="#">Hide</a></p>
+                <p><a href="#">Repply</a></p>
+                <p>(Updating...)</p>
               </td>
             </tr>
             @empty

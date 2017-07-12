@@ -34,11 +34,12 @@ class HomeController extends Controller
         } catch (Facebook\Exceptions\FacebookSDKException $e) {
             dd($e->getMessage());
         }
-        // dd($response->getGraphObject()['groups']->all());
-        $groups = $response->getGraphObject()['groups']->all();
-        // dd($groups[0]->all()['name']);
-        // dd(json_decode($response, true));
-        return view('admin.index', compact('groups'));
+        
+        if (array_key_exists('groups', $response->getGraphObject()->all())) {
+            $groups = $response->getGraphObject()['groups']->all();
+            return view('admin.index', compact('groups'));
+        } 
+        return view('admin.no_group');
     }
 
     public function post(Request $request)
